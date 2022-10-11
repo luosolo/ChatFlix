@@ -8,6 +8,12 @@
  I've defined different implementation of chat server
  the first one `chatflix_console` runs on a terminal
  
+## requirements
+
+`pip install -m requirements.txt`
+
+# Chatflix Console version 
+
  To run the server:
  `python chat_server.py host_IP host_PORT`
 
