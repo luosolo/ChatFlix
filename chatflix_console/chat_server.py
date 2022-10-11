@@ -4,6 +4,12 @@ from guest import Guest
 import sys
 import json
 
+from colorama import Fore
+import random
+
+color_list = [Fore.RED, Fore.GREEN, Fore.YELLOW, Fore.BLUE, Fore.MAGENTA, Fore.CYAN, Fore.CYAN, Fore.WHITE]
+
+
 
 CONFIG_HEADER = "\CONFIG"
 
@@ -121,7 +127,7 @@ if __name__ == "__main__":
             
             # We add it to the list of client and create a new 
             # thread listen it
-            g = Guest(None, client_address, client_socket)
+            g = Guest(None, client_address, client_socket,random.choice(color_list))
             guests.add(g)
             listen_thread = Listening_Thread_Server(guests, g)        
 

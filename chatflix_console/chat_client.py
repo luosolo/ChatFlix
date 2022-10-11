@@ -3,6 +3,8 @@ from threading import Thread
 import json
 import sys
 import time
+from colorama import init
+init(autoreset=True)
 
 
 
@@ -56,7 +58,7 @@ if __name__ == "__main__":
 			if to_send.lower() == 'q':
 				running = False			
 				t.running = False
-			else:								
+			else:				
 				s.send(to_send.encode())
 		
 		print("Closing connection")
